@@ -1,0 +1,156 @@
+body {
+  font-family: "Adobe Garamond Pro", Garamond, serif;
+  text-align: justify;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+header, section > * {
+  max-width: 700px;
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+section > figure, section > section {
+  max-width: 1000px;
+}
+
+figcaption {
+  font-family: "Adobe Garamond Pro", Garamond, serif;
+  font-size: 13px;
+}
+
+section#timeline {
+  max-width: 1800px;
+}
+
+section#timeline > p, h1 {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section#timeline table {
+  width: 1800px;
+  border-collapse: collapse;
+}
+
+section.abstract {
+/*  max-width: 600px;*/
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 90%;
+}
+
+table td, th {
+  border: 1px solid gray;
+  padding: 5px;
+}
+table th {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid black;
+}
+td:first-child, th:first-child {
+  border-left: none;
+}
+td:last-child, th:last-child {
+  border-right: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Adobe Garamond Pro", Garamond, serif;
+  font-weight: lighter;
+}
+
+h1.title {
+  font-size: 2.4em;
+}
+
+.header-section-number {
+  color: gray;
+}
+
+.author {
+  text-align: left;
+  margin-bottom: 0px;
+  margin-top: -10px;
+  font-size: 100%;
+}
+.date {
+  text-align: left;
+  font-size: 100%;
+}
+
+.footnoteRef {
+  font-size: 70%;
+  position: relative;
+  top: -0.4em;
+  color: gray;
+  text-decoration: none;
+}
+.footnoteRef::before {
+  content: "\00a0"; /* non-breaking space */
+  font-size: 25%; /* make the space very thin */
+}
+.footnoteRef sup::before {
+  content: "[";
+}
+.footnoteRef sup::after {
+  content: "]";
+}
+.post-subject {
+  position: relative;
+}
+.post-sidenote {
+  box-sizing: border-box; /* Add vendor prefixes as needed */
+  left: 100%;
+  padding-left: 20px; /* Your site's gutter value */
+  position: absolute;
+  top: 0;
+  width: 40%;
+  font-size: 90%;
+  display: none;
+}
+
+.post-sidenote a[href^="#fnref"] {
+  display: none;
+}
+
+/*@media screen and (min-width: 800px) {
+  .footnotes {
+    display: none;
+  }
+  .post-sidenote {
+    display: block;
+  }
+  
+  .footnoteRef {
+    pointer-events: none;
+    cursor: default;
+  }
+}*/
+
+a[href^="#fnref"] {
+  text-decoration: none;
+}
+
+.filenote {
+  font-style: italic;
+}
+
+.date {
+  margin-top: 0px;
+}
+.affiliation {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+blockquote {
+  padding-left: .5em;
+  border-left: 3px solid lightgray;
+  max-width: 600px;
+}
