@@ -7,7 +7,7 @@ author:
 date: February 6, 2015
 bibliography: library.bib
 also-available:
-- filename: outline.pdf
+- filename: paper.pdf
   type: pdf
 ---
 
