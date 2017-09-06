@@ -1,8 +1,6 @@
-<script src="jquery-1.11.1.min.js"></script>
+<script src="jquery-3.2.1.min.js"></script>
 <script src="fragmention.js"></script>
 <script src="prepare-figures.js" charset="utf-8"></script>
-<script src="d3.min.js"></script>
-<link rel="stylesheet" href="graphs.css" media="screen" charset="utf-8">
 <style type="text/css" media="screen">
 body [fragmention] {
   border-left: 1px solid rgba(215,215,0);
@@ -14,9 +12,9 @@ cite {
 <script type="text/javascript" charset="utf-8">  
   $(document).ready(function() {
     // uncomment below to use the functions in prepare-figures.js
-    //createSidenotes();
-    //toggleNotes();
-    //prepareAnnotations();
+    createSidenotes();
+    toggleNotes();
+    prepareAnnotations();
     //generatedFigures = [];
     //prepareFigures();
     
