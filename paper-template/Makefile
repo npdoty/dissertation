@@ -32,13 +32,13 @@ tex:	clean $(TEX)
 
 
 %.html:	%.mdown
-	PYTHONPATH=/Users/nick/code/citeproc/citeproc-py/ pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block+link_attributes -t html5 -S -N --template=$(PREFIX)/templates/html.template -V lang=en --section-divs --css=style.css --include-in-header header.include --filter ./cite-filter.py --filter ./svg-pdf-filter.py --csl=$(PREFIX)/csl/$(CSL).csl -o $@ $<
+	PYTHONPATH=/Users/nick/code/citeproc/citeproc-py/ pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block+link_attributes -t html5 -S -N --template=$(PREFIX)/templates/html.template -V lang=en --section-divs --css=style.css --include-in-header header.include --filter ./cite-filter.py --csl=$(PREFIX)/csl/$(CSL).csl -o $@ $<
 
 %.tex:	%.mdown
-	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w latex -s -S -N --latex-engine=pdflatex --template=$(PREFIX)/templates/latex.template --filter pandoc-citeproc --filter ./svg-pdf-filter.py --csl=$(PREFIX)/csl/$(CSL).csl -o $@ $<
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w latex -s -S -N --latex-engine=pdflatex --template=$(PREFIX)/templates/latex.template --filter pandoc-citeproc --csl=$(PREFIX)/csl/$(CSL).csl -o $@ $<
 
 %.pdf:	%.mdown
-	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w latex -s -S -N --latex-engine=pdflatex --template=$(PREFIX)/templates/latex.template --filter ./svg-pdf-filter.py --filter pandoc-citeproc --csl=$(PREFIX)/csl/$(CSL).csl -o $*.pdf $<
+	pandoc -r markdown+simple_tables+table_captions+yaml_metadata_block -w latex -s -S -N --latex-engine=pdflatex --template=$(PREFIX)/templates/latex.template --filter pandoc-citeproc --csl=$(PREFIX)/csl/$(CSL).csl -o $*.pdf $<
 	
 	## if you need to do processing between .tex and .pdf, change the above line to output .tex and uncomment the lines below as necessary
 	##./replace.sh
